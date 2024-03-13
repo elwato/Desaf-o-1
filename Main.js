@@ -1,5 +1,26 @@
 // main.js
 
+// Función para ajustar dinámicamente el ancho del input según el texto ingresado
+function ajustarAnchoInput() {
+    var input = document.getElementById('textoCuadroInput');
+    var textoIngresado = input.value;
+    var textoWidth = getTextWidth(textoIngresado, '16px sans-serif'); // Ajusta la fuente según tu estilo
+    input.style.width = textoWidth + 'px';
+}
+
+// Función para obtener el ancho del texto
+function getTextWidth(text, font) {
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
+}
+
+// Llama a la función para ajustar el ancho del input cuando se modifica el texto
+document.getElementById('textoCuadroInput').addEventListener('input', ajustarAnchoInput);
+
+
 //encriptar el texto     
 function encriptarTexto() {
     var textoIngresado = document.getElementById('textoCuadroInput').value.toLowerCase();
