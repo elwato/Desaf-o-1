@@ -1,5 +1,5 @@
 // main.js
-document.addEventListener('DOMContentLoaded', function() {
+
 // Función para ajustar dinámicamente el ancho del input según el texto ingresado
 function ajustarAnchoInput() {
     var input = document.getElementById('textoCuadroInput');
@@ -195,5 +195,3 @@ function ajustarEstilos() {
 // Llama a la función cuando la ventana se carga y se redimensiona
 window.addEventListener('load', ajustarEstilos);
 window.addEventListener('resize', ajustarEstilos);
-
-});
