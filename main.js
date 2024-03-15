@@ -191,7 +191,3 @@ function ajustarEstilos() {
         // Restaura otros estilos según sea necesario
     }
 }
-
-// Llama a la función cuando la ventana se carga y se redimensiona
-window.addEventListener('load', ajustarEstilos);
-window.addEventListener('resize', ajustarEstilos);
